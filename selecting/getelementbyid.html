@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById</title>
+</head>
+<body>
+    <p id="inline">Add css use inline css </p>
+    <p id="multiplecss">Add css use csstext </p>
+    <p id="first">Add css use helper function</p>
+    <p class="note"> Add global css use class </p>
+    <p id="gcss"> Add global css use id </p>
+</body>
+<script>
+    let inline = document.getElementById('inline');
+    let elem = document.getElementById('first');
+    // inline css use style //
+    inline.style.backgroundColor='black';
+    inline.style.color='white';
+    inline.style.paddingLeft='20px';
+    inline.style.paddingTop='30px';
+    inline.style.fontSize='30px';
+    inline.style.paddingBottom='15px';
+
+    // multiple css use cssText  //
+     let multiplecss = document.getElementById('multiplecss');
+    multiplecss.style.cssText +='background-color:black;color:white;font-size:20px;padding-left:20px;padding-top:10px;padding-bottom:10px;';
+
+    // use helper function //
+    css(elem,{
+        'background-color': 'blue',
+        color: 'white',
+        paddingTop:'20px',
+        fontSize:'40px',
+        'padding-left':'30px',
+        paddingBottom:'15px'
+
+    })
+    console.log(elem.textContent);
+
+    function css(element,style){
+        for(property in style){
+            elem.style[property] = style[property];
+        }
+    }
+
+    // global css //
+    let style = document.createElement('style'); // create <style></style> tag
+    style.innerHTML = `
+        .note {
+            background-color: black;
+            color: white;
+            padding:20px;
+        }
+        #gcss {
+            background-color: yellow;
+            color:red;
+            font-size:20px;
+            padding:15px;
+
+        } 
+    `;
+    document.head.appendChild(style); // add <style></style> into <head> </head> tag
+</script>
+</html>

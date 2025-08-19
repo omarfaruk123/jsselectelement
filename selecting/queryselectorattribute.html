@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute selector</title>
+</head>
+<body>
+
+    <input type="text" name="username">
+    <input name="email">
+    <input type="password">
+    <input class="btn primary">
+    <input class="btn secondary">
+    <input class="btn primary">
+    <div lang="en">http</div>
+    <div lang="en-US">sms</div>
+    <input name="userName">
+    <input name="userEmail">
+
+
+    <script>
+        // use [attribute]
+        let att = document.querySelectorAll('input[name]');
+        // let att = document.querySelector('input[name]');
+        // for(i = 0; i<att.length; i++){
+        //     att[i].style.borderColor= 'red';
+        // }
+
+        // use [attribute=value]
+        let attv = document.querySelector('input[name="email"]');
+        // attv.style.borderColor = 'red';
+        let attrtype = document.querySelector('input[type="text"]');
+        // attrtype.style.borderColor = 'red';
+        // use [attribute~=value] — Contains word (space-separated)
+        // let pbtn = document.querySelector('[class~="primary"]');
+        // pbtn.style.backgroundColor = 'blue';
+        //    let pbtns = document.querySelectorAll('[class~="primary"]');
+        //     for(i=0; i<pbtns.length; i++){
+        //         pbtns[i].style.borderColor='red';
+        //     }
+
+        // [attribute|=value] — Starts with value or value followed by -
+        // let lang = document.querySelector('[lang|="en"]');
+        // lang.style.color = 'red';
+
+        // [attri]
+        
+
+
+        
+
+    </script>
+    
+</body>
+</html>

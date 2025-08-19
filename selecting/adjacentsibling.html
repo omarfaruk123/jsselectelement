@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Title</h1>
+    <p>Paragraph right after h1 </p>
+    <p>Another paragraph </p>
+    <h1> another h1 tag </h1>
+    <p> This my name </p>
+
+</body>
+<script>
+    let adjsib = document.querySelectorAll('h1 + p');
+    adjsib.forEach((ele) => {
+        ele.style.color='red';
+    })   
+</script>
+</html>

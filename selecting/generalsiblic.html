@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Title</h1>
+    <p>First sibling paragraph ✅</p>
+    <p>Second sibling paragraph ✅</p>
+    <div>Not a p ❌</div>
+    <p> after div p tag </p>
+</body>
+
+    <script>
+        let gensib = document.querySelector('h1~p');
+        // gensib.style.color='red';
+        let gensibs = document.querySelectorAll('h1~p');
+        gensibs.forEach((ele) => {
+            ele.style.color='red';
+        })
+    </script>
+</html>

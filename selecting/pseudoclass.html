@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>First</li>
+        <li>Second</li>
+        <li class="active">Third</li>
+        <li>Fourth</li>
+        </ul>
+    <input type="text" required>
+    <input type="checkbox" checked>
+    <a href="#">Link</a>
+</body>
+<script>
+    // first child
+    let fchild = document.querySelector("li:first-child");
+    fchild.style.color = 'red';
+    // last child
+    let lchild = document.querySelector("li:last-child");
+    lchild.style.color = 'blue';
+    // second child
+    let schild = document.querySelector('li:nth-child(2)');
+    schild.style.color = 'pink';
+    // third child
+    let tchild = document.querySelector('li:nth-of-type(3)');
+    tchild.style.color = 'yellow';
+    // select all without class active
+    let achildexcepactive = document.querySelectorAll('li:not(.active)');
+    console.log(achildexcepactive);
+  
+</script>
+</html>

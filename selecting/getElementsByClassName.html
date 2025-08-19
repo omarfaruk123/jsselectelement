@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByClassName</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li class="item">HTML</li>
+                <li class="item">CSS</li>
+                <li class="item highlight">JavaScript</li>
+                <li class="item">TypeScript</li>
+            </ul>
+        </nav>
+        <h1>getElementsByClassName Demo</h1>
+    </header>
+    <section>
+        <article>
+            <h2 class="secondary">Example 1</h2>
+        </article>
+        <article>
+            <h2 class="secondary">Example 2</h2>
+        </article>
+    </section>
+</body>
+<script>
+    let parentele = document.getElementById("menu");
+    let items = parentele.getElementsByClassName('item');
+    for(i = 0; i< items.length; i++){
+        items[i].style.color = "red";
+        console.log(items[i].textContent);
+    }
+    let data1 = [].map.call(items, item => item.textContent);
+    console.log(data1);
+    let output = [...items].map(item => item.textContent);
+    console.log(output);
+    let datat = Array.from(items, item => item.textContent);
+    console.log(datat);
+</script>
+</html>

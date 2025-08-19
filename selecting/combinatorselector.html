@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Direct child p ✅</p>
+        <section>
+            <p>Nested p ✅</p>
+        </section>
+        </div>
+        <div> <p> my name is omar </p></div>
+    <p>Outside div ❌</p>
+
+    
+</body>
+<script>
+    let descom = document.querySelectorAll('div p');
+        descom.forEach((ele) =>{
+            ele.style.color='red';
+        })
+</script>
+</html>

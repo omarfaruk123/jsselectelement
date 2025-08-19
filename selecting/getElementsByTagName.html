@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript getElementsByTagName() Demo</title>
+</head>
+<body>
+    <h1>JavaScript getElementsByTagName() Demo</h1>
+    <h2>First heading</h2>
+    <p>This is the first paragraph.</p>
+    <h2>Second heading</h2>
+    <p>This is the second paragraph.</p>
+    <h2>Third heading</h2>
+    <p>This is the third paragraph.</p>
+
+    <button id="btnCount">Count h2</button>
+    <p id="output"></p>
+
+    <script>
+        let btn = document.getElementById('btnCount');
+        let otp = document.getElementById('output');
+        btn.addEventListener('click', () => {
+            let headings = document.getElementsByTagName('h2');
+            for (let i = 0; i < headings.length; i++) {
+                headings[i].style.color = "red";
+                console.log(headings[i].textContent);
+                 otp.innerHTML += headings[i].textContent + "<br>"
+            }
+           
+        });
+    </script>
+</body>
+
+</html>

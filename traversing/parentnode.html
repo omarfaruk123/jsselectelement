@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parent node</title>
+</head>
+<body>
+    
+    <div id="main">
+        test
+        <p class="note">This is a note!</p>
+    </div>
+    <div id="container">
+      Hello <span id="child">World</span>
+    </div>
+
+</body>
+    <script>
+        let cnode = document.getElementsByClassName('note');
+       let pnode = cnode[0].parentNode;
+       pnode.style.backgroundColor = "red";
+
+        let cnod = document.querySelector('.note');
+        
+        let childnode = document.getElementById("child");
+        console.log(childnode.parentNode);
+        console.log(childnode.parentElement);
+        let anochild = document.getElementById("container");
+        console.log(anochild.parent)
+    </script>
+</html>

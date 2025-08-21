@@ -1,0 +1,17 @@
+
+
+SELECT  scp.id,scp.site_id,
+		TRIM(LOWER(scp.city_name)) city_name,
+        s.domain,
+        GROUP_CONCAT(DISTINCT z.State ORDER BY z.State) AS possible_states,
+    	COUNT(DISTINCT z.State) AS state_count
+        FROM site_city_pages scp 
+        JOIN ZIPCodes z
+    		ON TRIM(LOWER(scp.city_name)) = TRIM(LOWER(z.City))
+        JOIN sites s
+            ON scp.site_id = s.id
+        WHERE s.soft_delete = 0
+         AND s.hosted = 1
+        And scp.site_id =1
+        GROUP BY scp.site_id, scp.city_name, s.domain
+        HAVING state_count > 1

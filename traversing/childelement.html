@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children element</title>
+</head>
+<body>
+    <div id="container">
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <span>Span inside container</span>
+    </div>
+    <ul id="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+</body>
+    <script>
+        let parent = document.getElementById('container');
+        let childrens = parent.children;
+        console.log(childrens);
+        console.log(parent.firstChild);
+        console.log(parent.firstElementChild);
+        console.log(parent.lastChild);
+        console.log(parent.lastElementChild);
+
+        let menu = document.getElementById('menu');
+        let childrenss = menu.children;
+        console.log(childrenss);
+        let nodelistss = menu.childNodes;
+        console.log(nodelistss);
+        console.log(menu.children[1]);
+    </script>
+</html>

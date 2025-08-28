@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element </title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+    </ul>
+    <p> This is default paragraph tag</p>
+    <script>
+        let newele = document.createElement('div');
+        newele.id ="test";
+        newele.className = "my";
+       
+        newele.innerHTML = "<p>This is paragraph tag</p>";
+       let textnode = document.createTextNode('createElement example');
+        newele.appendChild(textnode);
+        document.body.appendChild(newele);
+         let css = document.getElementById('test');
+        css.style.color= 'red';
+        console.log(newele);
+        // bootstrap design
+        // container div
+        let cele = document.createElement('div');
+        cele.className='container';
+        // row div
+        let rele = document.createElement('div');
+        rele.className='row';
+        cele.appendChild(rele);
+        // column div
+        let colele1 = document.createElement('div');
+        colele1.className='col-sm-4';
+        colele1.textContent="This is col sm 4";
+        // second div
+        let secol2 = document.createElement("div");
+        secol2.className='cols-sm-4';
+        secol2.textContent="This is second column";
+        rele.appendChild(secol2);
+        rele.appendChild(colele1);
+        document.body.appendChild(cele);
+
+        let li = document.createElement('li');
+        li.textContent = 'Products';
+        const menu = document.querySelector('#menu');
+        menu.appendChild(li);
+
+        li = document.createElement('li');
+        li.textContent = 'About Us';
+
+        // select the ul menu element
+        
+        menu.appendChild(li);
+        let btn = document.createElement("button");
+        btn.textContent ='click me';
+        btn.style.backgroundColor='blue';
+        btn.style.color="white";
+        document.body.appendChild(btn);
+    </script>
+</body>
+</html>

@@ -36,17 +36,17 @@
     btn.addEventListener('click',() =>{
         let results = document.getElementsByName('rate');
 
-    // Loop through and apply CSS
-    // for (let i = 0; i < results.length; i++) {
-    //    let label = results[i].parentNode;
+  
+    for (let i = 0; i < results.length; i++) {
+       let label = results[i].parentNode;
        
-    //     label.style.backgroundColor = "lightblue";
-    //     label.style.padding = "10px";
-    //     label.style.fontSize = "20px";
-    //     label.style.display = "inline-block"; // so padding works nicely
-    //     label.style.borderRadius = "5px"; // rounded corners
-    //     label.style.margin = "5px";
-    // }
+        label.style.backgroundColor = "lightblue";
+        label.style.padding = "10px";
+        label.style.fontSize = "20px";
+        label.style.display = "inline-block"; // so padding works nicely
+        label.style.borderRadius = "5px"; // rounded corners
+        label.style.margin = "5px";
+    }
         results.forEach((rate) =>{
             if(rate.checked){
                 let label = rate.parentNode;

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <p> This is first child</p>
+    </div>
+</body>
+    <script>
+        let box = document.getElementById("box");
+        let newele = document.createElement("h1");
+        newele.textContent = "This is new h1 tag";
+        box.appendChild(newele);
+        let newh2 = document.createElement("h2");
+        newh2.textContent = "This is new h2 tag use after method";
+        let ptag = box.querySelector("p");
+        ptag.after(newh2);
+    </script>
+</html>

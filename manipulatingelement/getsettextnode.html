@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="note">
+        JavaScript textContent Demo!
+        <span style="display:none">Hidden Text!</span>
+        <!-- my comment -->
+    </div> 
+
+    <div id="box">
+        Hello <span style="display:none">hidden</span> <b>World</b>
+    </div>
+
+</body>
+    <script>
+          // get text use textcontent
+        let getcontext = document.getElementById("box");
+        console.log(getcontext.textContent);
+        // set textcontent
+        // console.log(getcontext.textContent="New <b>text</b>");
+        // get text use innertext 
+        let getinnertext = document.getElementById("box");
+        console.log(getinnertext.innerText);
+        // set innertext
+        console.log(getinnertext.innerText="<p>New <b>textss</b>")
+        // let ele = document.getElementById("note");
+        // let tex = ele.textContent;  // if I use textcontent only show text and hidden text
+        // console.log(tex);
+        // let innertex = ele.innerHTML; // if I use innerhtml show all like text,hidden text, and comment
+        // console.log(innertex);
+        // let innertext = ele.innerText; // if I use innerText then show only text
+        // console.log(innertext);
+
+      
+
+    </script>
+</html>

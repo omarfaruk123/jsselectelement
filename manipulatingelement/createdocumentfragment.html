@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createDocumentFragment</title>
+</head>
+<body>
+    <div id="lang">
+
+    </div>
+</body>
+
+    <script>
+        languages = ['php','java','go','python','laravel'];
+        let lang = document.getElementById("lang");
+        let dfrag = document.createDocumentFragment();
+        languages.forEach(element => {
+            let ptag = document.createElement("p");
+            ptag.textContent = element;
+            dfrag.appendChild(ptag);
+        });
+        lang.appendChild(dfrag);
+    </script>
+</html>

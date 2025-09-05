@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML Vs textContent </title>
+</head>
+<body>
+    <div class="box">
+        <h1> This is head tag </h1>
+    </div>
+     <div id="box">
+        <h1> This is head tag </h1>
+    </div>
+    
+</body>
+
+    <script>
+        let ele = document.querySelector('.box');
+        let pele = document.createElement('p');
+        pele.textContent = "This is p tag";
+        ele.appendChild(pele);
+        console.log(ele);
+        // use innerhtml
+        let idele = document.getElementById("box");
+        idele.innerHTML += "<p> This is new p tag </p>";
+        console.log(idele);
+
+    </script>
+</html>

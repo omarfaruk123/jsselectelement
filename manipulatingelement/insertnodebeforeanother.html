@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert a node before another </title>
+</head>
+<body>
+    <div id="box">
+        <p> This is p tag</p>
+    </div>
+    
+</body>
+    <script>
+        let box = document.getElementById("box");
+        let newele = document.createElement("h1");
+        newele.textContent = "This is new heading tag";
+        let ptag = box.querySelector("p");
+        ptag.before(newele);
+
+    </script>
+</html>
